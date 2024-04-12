@@ -1622,6 +1622,16 @@ if (constrain_to_1D) {
   } "Constrain conserved fluid velocity to radial direction"
 }
 
+if (apply_FakeTmunu) {
+
+  schedule ApplyFakeTmunu IN AddToTmunu
+  {
+    LANG: C
+  } "Compute the energy-momentum tensor of fake matter that doesnt evolve"
+
+}
+
+
 
 if (apply_H_viscosity) {
   if (use_cxx_code) {

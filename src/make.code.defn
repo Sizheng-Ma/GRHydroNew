@@ -93,6 +93,7 @@ SRCS = 	Utils.F90 \
         GRHydro_MP5Reconstruct.cc \
         GRHydro_Wrappers.F90 \
 	GRHydro_HLLE.cc \
+	GRHydro_FakeTmunu.cc \
 	GRHydro_Source.cc \
 	GRHydro_Source.F90
 

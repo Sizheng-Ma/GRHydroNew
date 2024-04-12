@@ -789,6 +789,43 @@ BOOLEAN verbose "Some debug output" STEERABLE = always
 
 
 
+#---------------------------------
+# Fake Tmunu options             #
+#---------------------------------
+BOOLEAN apply_FakeTmunu "Apply Tmunu to the rhs" STEERABLE = always
+{
+} no
+
+keyword FakeTmunu_traj "Which traj to use" STEERABLE=RECOVER
+{
+  "circular orbits"	   :: "Matter moving in circular orbits"
+} "circular orbits"
+
+keyword FakeTmunu_matter "Which matter to use" STEERABLE=RECOVER
+{
+  "gaussian"	   :: "2 gaussian balls of cold matter"
+} "gaussian"
+
+CCTK_REAL FakeTmunu_omega "Orbital speed of matter" STEERABLE=RECOVER 
+{
+  0:           :: "Greater or equal to 0"
+} 0
+
+CCTK_REAL FakeTmunu_r "Radius where matter is placed" STEERABLE=RECOVER 
+{
+  0:           :: "Greater or equal to 0"
+} 40
+
+CCTK_REAL FakeTmunu_rho "Density of matter" STEERABLE=RECOVER 
+{
+  0:           :: "Greater or equal to 0"
+} 1e-5
+
+CCTK_REAL FakeTmunu_median "Extension of matter" STEERABLE=RECOVER 
+{
+  0:           :: "Greater or equal to 0"
+} 1e-2
+
 
 
 ############### Testing options ###################################################
